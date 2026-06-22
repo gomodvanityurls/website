@@ -1,1 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>GoMod Vanity URLs</title><link>https://gomodvanityurls.com/zh/</link><description>Recent content on GoMod Vanity URLs</description><generator>Hugo</generator><language>zh</language><atom:link href="https://gomodvanityurls.com/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>快速开始</title><link>https://gomodvanityurls.com/zh/docs/quickstart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gomodvanityurls.com/zh/docs/quickstart/</guid><description>5 分钟内完成 Go vanity URL 的配置与使用</description></item><item><title>自定义域名</title><link>https://gomodvanityurls.com/zh/docs/custom-domains/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gomodvanityurls.com/zh/docs/custom-domains/</guid><description>使用你自己的域名作为 Go vanity URL 前缀</description></item><item><title>CLI 命令参考</title><link>https://gomodvanityurls.com/zh/docs/cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gomodvanityurls.com/zh/docs/cli/</guid><description>gvu 命令行工具完整参考</description></item><item><title>定价</title><link>https://gomodvanityurls.com/zh/pricing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gomodvanityurls.com/zh/pricing/</guid><description>gomodvanityurls 的套餐与配额</description></item><item><title>社区</title><link>https://gomodvanityurls.com/zh/community/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://gomodvanityurls.com/zh/community/</guid><description>加入 gvu 社区 — 获取帮助、反馈 Bug、与其他用户交流</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GoMod Vanity URLs</title>
+    <link>https://gomodvanityurls.com/zh/</link>
+    <description>Recent content on GoMod Vanity URLs</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <atom:link href="https://gomodvanityurls.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>快速开始</title>
+      <link>https://gomodvanityurls.com/zh/docs/quickstart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gomodvanityurls.com/zh/docs/quickstart/</guid>
+      <description>5 分钟内完成 Go vanity URL 的配置与使用</description>
+    </item>
+    <item>
+      <title>自定义域名</title>
+      <link>https://gomodvanityurls.com/zh/docs/custom-domains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gomodvanityurls.com/zh/docs/custom-domains/</guid>
+      <description>使用你自己的域名作为 Go vanity URL 前缀</description>
+    </item>
+    <item>
+      <title>CLI 命令参考</title>
+      <link>https://gomodvanityurls.com/zh/docs/cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gomodvanityurls.com/zh/docs/cli/</guid>
+      <description>gvu 命令行工具完整参考</description>
+    </item>
+    <item>
+      <title>定价</title>
+      <link>https://gomodvanityurls.com/zh/pricing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gomodvanityurls.com/zh/pricing/</guid>
+      <description>gomodvanityurls 的套餐与配额</description>
+    </item>
+    <item>
+      <title>社区</title>
+      <link>https://gomodvanityurls.com/zh/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gomodvanityurls.com/zh/community/</guid>
+      <description>加入 gvu 社区 — 获取帮助、反馈 Bug、与其他用户交流</description>
+    </item>
+  </channel>
+</rss>
