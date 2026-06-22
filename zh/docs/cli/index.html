@@ -108,8 +108,8 @@
   "keywords": [
     
   ],
-  "articleBody": "路由管理 命令 说明 gvu add 添加新的 vanity URL 路由 gvu list 列出所有已注册的路由 gvu remove [...] 删除一个或多个路由 gvu add 托管平台会根据仓库 URL 自动识别。\n# gomod.io 路由（默认域名，所有用户可用） gvu add gomod.io/private-module https://github.com/myorg/private-module.git gvu add gomod.io/private-module https://gitlab.com/myorg/private-module.git gvu add gomod.io/private-module git@github.com:myorg/private-module.git # 自定义域名路由（仅 Verified/Pro 用户可用） gvu add go.mycompany.com/private-module https://github.com/myorg/private-module.git gvu add go.mycompany.com/api ssh://git@gitlab.example.com:2222/group/api.git gvu remove 支持批量删除：\ngvu remove m_abc123 # 单个删除 gvu remove m_abc123 m_def456 # 多个删除 gvu remove m_abc123 m_def456 -y # 跳过确认 认证 命令 说明 gvu auth signup 创建匿名账户 gvu auth bind 绑定邮箱，升级为 Verified gvu auth login 在新设备上通过邮箱验证码登录 gvu auth logout 清除本地凭证 gvu auth whoami 显示当前账户信息和配额 其他命令 命令 说明 gvu donate 显示捐赠二维码 gvu issue 提交 GitHub Issue gvu --version 显示版本号 全局参数 参数 简写 说明 --json -j 结构化 JSON 输出 --yes -y 跳过确认提示 --version -v 显示版本号 JSON 输出 所有命令都支持 --json：\n$ gvu list --json { \"status\": \"success\", \"data\": { \"routes\": [ { \"id\": \"m_abc123\", \"vanity_path\": \"gomod.io/private-module\", \"target_repo\": \"https://github.com/myorg/private-module.git\", \"repo_type\": \"github\" } ] } } 支持的 Git 平台 平台 HTTPS SSH 自托管 GitHub 支持 支持 — GitLab 支持 支持 支持 Bitbucket 支持 支持 — Codeberg 支持 支持 — 自定义 支持 支持 支持 配置文件 凭证存储在 ~/.config/gvu/config.yaml，首次使用时自动创建。\n",
-  "wordCount" : "185",
+  "articleBody": "路由管理 命令 说明 gvu add 添加新的 vanity URL 路由 gvu list 列出所有已注册的路由 gvu remove [...] 删除一个或多个路由 gvu add 托管平台会根据仓库 URL 自动识别。\n# ── gomod.io 路由（默认域名，所有用户可用）── # GitHub gvu add gomod.io/mylib https://github.com/myorg/mylib.git gvu add gomod.io/mylib ssh://git@github.com:myorg/mylib.git # GitLab gvu add gomod.io/mylib https://gitlab.com/myorg/mylib.git gvu add gomod.io/mylib ssh://git@gitlab.com:myorg/mylib.git # Bitbucket gvu add gomod.io/mylib https://user@bitbucket.org/myorg/mylib.git gvu add gomod.io/mylib ssh://git@bitbucket.org:myorg/mylib.git # Codeberg gvu add gomod.io/mylib https://codeberg.org/myorg/mylib.git gvu add gomod.io/mylib ssh://git@codeberg.org/myorg/mylib.git # 自托管 GitLab（自定义端口） gvu add gomod.io/mylib http://gitlab.example.com/group/mylib.git gvu add gomod.io/mylib ssh://git@gitlab.example.com:2222/group/mylib.git # ── 自定义域名路由（仅 Verified/Pro 用户可用）── gvu add go.mycompany.com/mylib https://github.com/myorg/mylib.git gvu add go.mycompany.com/mylib ssh://git@gitlab.com:myorg/mylib.git gvu remove 支持批量删除：\ngvu remove m_abc123 # 单个删除 gvu remove m_abc123 m_def456 # 多个删除 gvu remove m_abc123 m_def456 -y # 跳过确认 认证 命令 说明 gvu auth signup 创建匿名账户 gvu auth bind 绑定邮箱，升级为 Verified gvu auth login 在新设备上通过邮箱验证码登录 gvu auth logout 清除本地凭证 gvu auth whoami 显示当前账户信息和配额 其他命令 命令 说明 gvu donate 显示捐赠二维码 gvu issue 提交 GitHub Issue gvu --version 显示版本号 全局参数 参数 简写 说明 --json -j 结构化 JSON 输出 --yes -y 跳过确认提示 --version -v 显示版本号 JSON 输出 所有命令都支持 --json：\n$ gvu list --json { \"status\": \"success\", \"data\": { \"routes\": [ { \"id\": \"m_abc123\", \"vanity_path\": \"gomod.io/private-module\", \"target_repo\": \"https://github.com/myorg/private-module.git\", \"repo_type\": \"github\" } ] } } 支持的 Git 平台 平台 HTTPS SSH 自托管 GitHub 支持 支持 — GitLab 支持 支持 支持 Bitbucket 支持 支持 — Codeberg 支持 支持 — 自定义 支持 支持 支持 配置文件 凭证存储在 ~/.config/gvu/config.yaml，首次使用时自动创建。\n",
+  "wordCount" : "226",
   "inLanguage": "zh",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -248,14 +248,32 @@
 </table>
 <h3 id="gvu-add"><code>gvu add</code><a hidden class="anchor" aria-hidden="true" href="#gvu-add">#</a></h3>
 <p>托管平台会根据仓库 URL <strong>自动识别</strong>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># gomod.io 路由（默认域名，所有用户可用）</span>
-</span></span><span style="display:flex;"><span>gvu add gomod.io/private-module https://github.com/myorg/private-module.git
-</span></span><span style="display:flex;"><span>gvu add gomod.io/private-module https://gitlab.com/myorg/private-module.git
-</span></span><span style="display:flex;"><span>gvu add gomod.io/private-module git@github.com:myorg/private-module.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># ── gomod.io 路由（默认域名，所有用户可用）──</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 自定义域名路由（仅 Verified/Pro 用户可用）</span>
-</span></span><span style="display:flex;"><span>gvu add go.mycompany.com/private-module https://github.com/myorg/private-module.git
-</span></span><span style="display:flex;"><span>gvu add go.mycompany.com/api   ssh://git@gitlab.example.com:2222/group/api.git
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># GitHub</span>
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib https://github.com/myorg/mylib.git
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib ssh://git@github.com:myorg/mylib.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># GitLab</span>
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib https://gitlab.com/myorg/mylib.git
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib ssh://git@gitlab.com:myorg/mylib.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Bitbucket</span>
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib https://user@bitbucket.org/myorg/mylib.git
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib ssh://git@bitbucket.org:myorg/mylib.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Codeberg</span>
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib https://codeberg.org/myorg/mylib.git
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib ssh://git@codeberg.org/myorg/mylib.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 自托管 GitLab（自定义端口）</span>
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib http://gitlab.example.com/group/mylib.git
+</span></span><span style="display:flex;"><span>gvu add gomod.io/mylib ssh://git@gitlab.example.com:2222/group/mylib.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ── 自定义域名路由（仅 Verified/Pro 用户可用）──</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gvu add go.mycompany.com/mylib https://github.com/myorg/mylib.git
+</span></span><span style="display:flex;"><span>gvu add go.mycompany.com/mylib ssh://git@gitlab.com:myorg/mylib.git
 </span></span></code></pre></div><h3 id="gvu-remove"><code>gvu remove</code><a hidden class="anchor" aria-hidden="true" href="#gvu-remove">#</a></h3>
 <p>支持批量删除：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gvu remove m_abc123                    <span style="color:#6272a4"># 单个删除</span>
